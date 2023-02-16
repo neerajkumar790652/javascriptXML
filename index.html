@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<script
+			crossorigin
+			src="https://unpkg.com/react@18/umd/react.development.js"
+		></script>
+		<script
+			crossorigin
+			src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"
+		></script>
+		<script
+			crossorigin
+			src="https://unpkg.com/react@18/umd/react.production.min.js"
+		></script>
+		<script
+			crossorigin
+			src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js"
+		></script>
+		<title>Day1</title>
+	</head>
+	<body>
+		<div id="s"></div>
+
+		<script>
+			// normal javascript
+
+			// const heading = document.createElement("h1");
+			// heading.innerText="Hello Guys"
+			// const div = document.getElementsByTagName("body");
+			// div[0].appendChild(heading);
+
+			// ReactJS
+			const heading = React.createElement("h1",{
+                style:{textAlign:"center"}
+            },"About us");
+            const subheading1 = React.createElement("p",{
+                style:{textAlign:"center",fontSize:"20px"}
+            },"At Zappos.com our purpose is simple: to live and deliver WOW.");
+			const subheading2 = React.createElement("p",{
+                style:{textAlign:"center",fontSize:"20px"}
+            },"Twenty years ago,we began as a small online retailer that only soold shoes.Today we still sell shoes -- as well as clothing,handbag,accessories,and more.That more is providing the very best customer service,customer experience,and company culture.We aim to inspire the world by showing it's possible to simultaneously deliver happiness to customer,employees,vendors,shareholders,and the community in a long-term,sustainable way");
+			const subheading3 = React.createElement("p",{
+                style:{textAlign:"center",fontSize:"20px"}
+            },"We hope that in the future people won't even realize we started selling shoes online.Instead,They'll know Zappos as a service company that just happens to sell______");
+            const div = React.createElement("div",{},[heading,subheading1,subheading2,subheading3]);
+		    const hello = ReactDOM.createRoot(document.getElementById("s"));
+            hello.render(div)
+		</script>
+	</body>
+</html>
